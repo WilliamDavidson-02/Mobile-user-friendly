@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,700;1,200;1,500;1,900&family=Poppins:wght@100;200;300;500;700;900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+    background-color: rgb(20, 20, 20);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    padding: 40px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.burger {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    rotate: 180deg;
+}
+
+@media screen and (max-width: 900px) {
+    .navul, .navspan {
+        opacity: 0;
+        position: absolute;
+    }
+    .burger {
+        opacity: 1;
+        position: static;
+    }
+}
+
+.navul {
+    padding: 0;
+}
+
+.navli, .togglednav {
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1.3rem;
+    transition: all .5s;
+}
+
+@media (max-width: 1200px) {
+    .navli {
+        font-size: 1rem;
+    }
+}
+
+.navspan, .navli, .goveeLogo {
+    color: white;
+    cursor: pointer;
+}
+
+.navspan:hover, .navli:hover {
+    color: #00a9e3;
+}
+
+
+.m1, .m2, .m3 {
+    background: white;
+    width: 30px;
+    height: 3px;
+    margin: 6px;
+    border-radius: 3px;
+    transition: ease .3s;
+}
+
+.mToggle {
+    width: 20px;
+    background-color: rgba(0, 169, 227, .8);
+    transition: ease .3s;
+}
+
+.mToggle2 {
+    background-color: rgba(255, 255, 255, .2);
+    width: 10px;
+    transition: ease .3s;
+}
+
+.navspan {
+    padding-left: 20px;
+}
+
+.navInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.navInfo {
+    width: 600px;
+    height: 200px;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0;
+    position: fixed;
+    transform: translateX(-100%) scale(0);
+    display: grid;
+    place-content: center;
+}
+
+.toggled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.goveespan {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #00a9e3;
+}
+
+.burgerToggledCon {
+    transform: translateX(100%) scale(0);
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, rgb(20, 20, 20),rgb(20, 20, 20), rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 0));
+}
+
+.burgerNavToggled {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.togglednav {
+    cursor: pointer;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.togglednav:hover {
+    color: #00a9e3;
+}
+
+@media (min-width: 900px) {
+    .burgerToggledCon {
+        opacity: 0;
+    }
+}
+
+/* mainContainer */
+main {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    height: 100vh;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.goveimg {
+    height: 800px;
+    margin: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 6rem;
+    margin: 0;
+}
+
+p, .mainGoveeLightbarBtn {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.mainGoveeLightbarBtn {
+    background-color: #00a9e3;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.mainGoveeLightbarBtn:hover {
+    background-color: #008fbe;
+}
+
+.goveeLightsText {
+    width: 600px;
+    padding-bottom: 200px;
+}
+
+.goveeLightbarMain {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 872px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .goveeLightsText {
+    width: 400px;
+  }
+  .goveeLightbarMain, h1 {
+    text-align: center;
+  }
+  .btnMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+/* mainContainer */
